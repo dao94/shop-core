@@ -14,7 +14,9 @@
 Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
+Route::get('sanpham/{id}', 'HomeController@list_category_by_id')->where('id', '[0-9]+');
 Route::get('tintuc','NewsController@index');
+Route::get('lienhe','ContactController@index');
 Route::get('home2',function() {
 	$users = DB::table('group_news')->select('name')->get();
 	foreach ($users as $key => $value) {

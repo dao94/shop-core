@@ -1,189 +1,316 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Bootstrap 101 Template</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{{ asset('css/bootstrap.min.css')}}" rel="stylesheet" media="screen">
-    <link href="{{ asset('css/style.css')}}" rel="stylesheet" media="screen">
-  </head>
-  <body>
-    <div class="header">
-      <div class="top_nav">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8"></div>
-            <div class="col-md-4">
-              <span class="glyphicon glyphicon-user"></span><a href=""> Đăng nhập</a> hoặc <a href="">đăng ký tài khoản </a>
-            </div>
-          </div>
-        </div>
-      </div><!-- end top-nav-->
-      <div class="main_nav">
-        <div class="container">
-          <nav class="navbar navbar-default main-menu" role="navigation">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand logo" href="index.html"><img src="images/logo.png" alt="LOGO" /></a>
-            </div>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    
+<!-- Mirrored from www.tuanminhexport.com/home/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 May 2015 14:00:17 GMT -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <title>Nam phuong Tradding & Production Co.,Ltd</title>
+    <meta name="description" content="Nam phuong Tradding & Production Co.,Ltd" />
+    <meta name="keywords" content="tuanminhexport, Tuấn Minh JSC, Tuấn Minh,Nam phuong Tradding & Production Co.,Ltd" />
+    <meta content='global' name='distribution'/>
+    <meta content='1 days' name='revisit'/>
+    <link href="{{asset('styles/style.css')}}" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="{{asset('scripts/jquery-1.7.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('scripts/jquery.vticker.js')}}"></script>
+    <link rel="stylesheet" href="{{asset('scripts/nivo-slider/nivo-slider.css')}}" type="text/css" media="screen" />
+    <script type="text/javascript" src="{{asset('scripts/nivo-slider/jquery.nivo.slider.js')}}"></script>
+    <script type="text/javascript" src="{{asset('scripts/gen_validatorv31.js')}}"></script>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav navbar-right menu">
-                <li class="active"><a href="index.html">Trang chủ</a></li>
-                <li><a href="introduction.html">Giới thiệu</a></li>
-                <li><a href="#">Sản phẩm</a></li>
-                <li><a href="#">Tin tức</a></li>
-                <li><a href="#">Hỏi đáp</a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Liên hệ <b class="caret"></b></a>
-                </li>
-              </ul>
-            </div><!-- /.navbar-collapse -->
-          </nav>
-        </div>
-      </div><!-- end main-nav-->
-      <div class="slide">
+<!-- Arquivos utilizados pelo jQuery lightBox plugin -->
+    <script type="text/javascript" src="{{asset('scripts/lightbox/js/jquery.lightbox-0.5.js')}}"></script>
+    <link rel="stylesheet" type="text/css" href="{{asset('scripts/lightbox/css/jquery.lightbox-0.5.css')}}" media="screen" />
+<!-- / fim dos arquivos utilizados pelo jQuery lightBox plugin -->
 
-      </div><!--end-slide-->
-    </div><!-- end header-->
-    <div class="main-page container">
-      <div class="row">
-        <div class="col-md-9">
-        @yield('content')
-        </div><!-- main-content-->
-        <div class="col-md-3">
-          <div class="sidebar-right">
-            <div class="title-sidebar">
-                <a href="#">Danh mục sản phẩm</a>
-            </div>
-                <ul class="list-unstyled list-style ">
-                  <li><a href="#">Áo thun nữ</a></li>
-                  <li><a href="#">Áo khoác nữ</a></li>
-                  <li><a href="#">Váy - Đầm nữ</a></li>
-                  <li><a href="#">Sơ mi nữ</a></li>
-                  <li><a href="#">Phụ kiện nữ</a></li>
-                </ul>
-            </div><!--sibar right-->
-            <div class="sidebar-right">
-                <div class="title-sidebar">
-                    <a href="#">Tin tức</a>
+<style type="text/css">
+    /* jQuery lightBox plugin - Gallery style */
+    #gallery {
+        padding: 10px;
+        width: 600px;
+    }
+    #gallery ul { list-style: none; }
+    #gallery ul li { display: inline; float: left; }
+    #gallery ul img {
+        width: 140px;
+        border:1px solid #ccc;
+        padding: 1px;
+        margin-right: 3px;
+    }
+    #gallery ul a:hover img {
+        border: 1px solid #000;
+        color: #fff;
+    }
+    #gallery ul a:hover { color: #fff; }
+</style>
+</head>
+    <body>
+        <div class="vns_main">
+            <div class="header"> 
+                <a href="index.html" title="Nam phuong Tradding & Production Co.,Ltd" rel="nofollow" id="logo">
+                    <img src="images/logo.png" style="width:217px;height:70px" /> </a>
+                <img id="slogan" src="images/banner.png" width="530" />
+                <div class="searchbox">
+                    <ul>
+                        <li> <a href="" title="Nam phuong Tradding & Production Co.,Ltd">Home</a> </li>
+                        <li> <a href="javascript:void(0);">Help</a> </li>
+                        <li> <a href="lien-he.html">Contact</a> </li>
+                    </ul>
+                    <form method="get" action="http://www.tuanminhexport.com/">
+                        <input type="text" name="search" />
+                        <input type="submit" value=""/>
+                    </form>
                 </div>
-                @if(isset($news) && !empty($news))
-                  @foreach($news as $news)
-                  <div class="media">
-                      <a class="pull-left" href="#">
-                        <img style="width:51px;height:45px" class="media-object sidebar-image" src="/uploads/{{$news->images}}" alt="anh1" />
-                      </a>
-                      <div class="media-body">
-                        <a href="#">{{$news->name}}</a>
-                      </div>
-                  </div>
-                  @endforeach
-                @endif
-                <p class="pull-right" ><a href=""><i style="color:red">Xem tiếp ... </i></a></p>
-                <div class="clearfix"></div>
-            </div><!--sibar right-->
-            <div class="sidebar-right muahang">
-              <p>HƯỚNG DẪN MUA HÀNG TẠI NHÍM SHOP</p>
-              <img  class="img-responsive" src="images/tui_bg.png">
-              <img  class="tui2" src="images/tui2_bg.png">
-            </div><!--sidebar-right muahang-->
-            <div class="facebook ">
-              <img src="images/facebook_bg.png" />
-            </div><!--facebook-->
-        </div><!--end col-md-3-slide-bar-->
-      </div>
-       <div class="col-md-12">
-          <div class="dathang">
-              <img class="img-responsive" src="images/anh5_bg.png"/>
-          </div><!--end.dathang-->
+                <!-- end searchbox --> 
+                <!-- end searchbox --> 
+            </div>
+            <!-- end .header -->
+            <div id="cssmenu">
+                <ul>
+                    <li><a href="index.html" title="Nam phuong Tradding & Production Co.,Ltd"><span>Home</span></a></li>
+                    <li class="has-sub"> 
+                        <a href="about-us.html" title="Introduction"> <span>Introduction</span> </a> 
+                            <ul>
+                                <li>
+                                    <a href="ve-chung-toi.html" title="About us">
+                                    <span>About us</span>
+                                    </a>
+                                    <a href="khach-hang-thi-truong.html" title="customer and exporting market">
+                                    <span>customer and exporting market</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-sub"> 
+                        <a href="spices-and-foods/index.html" title="Product">
+                            <span>Product</span>
+                        </a>
+                        <ul>
+                            <li>
+                                @foreach($list_category as $list)
+                                <a href="spices-and-foods/index.html" title="">
+                                    <span>{{$list->name}}</span>
+                                </a>
+                                @endforeach
+                            </li>
+                        </ul>
+                    </li>
+                    <li > 
+                        <a href="tin-tuc-su-kien.html" title="News"> <span>News</span> </a> 
+                    </li>
+                    <li > 
+                        <a href="dich-vu.html" title="services"> <span>services</span> </a> 
+                    </li>
+                    <li class="has-sub"> 
+                        <a href="photo-of-shipment.html" title="Photo bank"> <span>Photo bank</span> </a> 
+                    </li>
+                    <li><a href="lien-he.html" title="Contacts"><span>Contacts</span></a></li>
+                </ul>
+            </div>
+            <!-- end cssmenu -->
+            <div class="slider">
+            <div style="clear:both; height:15px;"></div>
+            <div id="slide"> 
+                <a href="index.html" title="Slide 3"> 
+                    <img src="images/slide8.png" alt="Slide 3" /> 
+                </a> 
+                <a href="index.html" title="Slide 3"> 
+                    <img src="images/1.jpg" alt="Slide 3" /> 
+                </a> 
+                <a href="index.html" title="Slide 3"> 
+                    <img src="images/2.jpg" alt="Slide 3" /> 
+                </a>
+            </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#slide').nivoSlider({
+                effect:"boxRandom",
+                slices:15,
+                boxCols:8,
+                boxRows:4,
+                animSpeed:500,
+                pauseTime:3000,
+                startSlide:0,
+                directionNav:true,
+                directionNavHide:true,
+                controlNav:true,
+                controlNavThumbs:false,
+                controlNavThumbsFromRel:true,
+                keyboardNav:true,
+                pauseOnHover:true,
+                manualAdvance:false
+            });                                     
+        });
+    </script>
+</div>
+<div class="vns_content">
+
+<div class="vns_left">
+    <div class="box">
+        <h3>Product list</h3>
+        <ul id="menuproductlist">
+            @foreach($list_category as $list)
+            <li>
+                <a href="" title="{{$list->name}}">{{$list->name}}</a>
+            </li>
+            @endforeach
+        </ul>
+        <script type="text/javascript">
+            $('ul#menuproductlist li').hover(function(){
+                $(this).find('>ul>li').show("200");
+            });
+        </script> 
+    </div><!-- end box menuproductlist -->
+
+    <div class="box">
+        <h3>Statistic</h3>
+        <div style="width:190px; background-color:#f5f5f5; margin-top:1px; line-height:24px; font-size:12px; color:#333">
+            <p style="padding-left:10px;">Online: 12</p>
+            <p style="padding-left:10px;">Total visite: 1234</p>
+            <div style="clear:both"></div>
         </div>
     </div>
-    <div class="col-md-12 footer">
-      <div class="main-page container">
-          <div class="col-md-3">
-            <div class="hotrokhachhang">
-              <h4>HỖ TRỢ KHÁCH HÀNG</h4>
-              <div class="line-hotro"></div>
-              <ul>
-                  <li><a href="#">Trợ giúp</a></li>
-                  <li><a href="#">Chính sách khách hàng</a></li>
-                  <li><a href="#">Hướng dẫn mua hàng</a></li>
-                  <li><a href="#">Gửi phản hồi / ý kiến</a></li>
-              </ul>
-            </div><!--end .hotrokhachhang-->
-          </div>
-          <div class="col-md-2">
-             <div class="hotrokhachhang">
-              <h4>VỀ NHÍM SHOP</h4>
-              <div class="line-hotro"></div>
-              <ul>
-                  <li><a href="#">Giới thiệu về Nhím Shop</a></li>
-                  <li><a href="#">Điều khoản sử dụng</a></li>
-                  <li class="face"><a href="#">Facebook</a></li>
-                  <li class="google"><a href="#">Google +</a></li>
-              </ul>
-            </div><!--end .hotrokhachhang-->
-          </div>
-          <div class="col-md-3">
-            <div class="hotrokhachhang">
-              <h4>LIÊN HỆ</h4>
-              <div class="line-hotro"></div>
-              <ul>
-                  <li><a href="#">Cơ sở : Số 123 - đường Mỹ Đình - Từ Liêm - Hà Nội</a></li>
-                  <li><a href="#">HOTLINE : 0962987026</a></li>
-                  <li><a href="#">Email : sales@nhimshop.com</a></li>
-                  <li><a href="#">skype :ac_nobita or thinhnguyen</a></li>
-              </ul>
-            </div><!--end .hotrokhachhang-->
-          </div>
-          <div class="col-md-3 hidden-xs">
-            <img src="images/bando_bg.png" class="responsive-img maps">
-          </div>
-      </div>
+    <div class="box adv"> 
+        <a href="http://vinastyle.vn/tuanminh/" target="_blank" title="QC6"> 
+            <img src="uploads/upload/images/product/huong-may-9-inches_1(1).jpg" onerror="this.src='images/logo.png'" alt="QC6" /> 
+        </a> 
     </div>
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title" id="myModalLabel">Đầm Vintage Chấm Bi</h4>
-          </div>
-          <div class="modal-body">
-            <div class="row">
-              <div class="col-md-4 col-sm-4 col-xs-4">
-                <a href=""><img src="images/product.jpg" alt="alt" class="img-responsive" /></a>
-              </div>
-              <div class="col-md-7 col-sm-7 col-xs-7">
-                <ul class="info-product">
-                  <li><strong>Giá</strong> : 100.000 vnđ</li>
-                  <li><strong>Size</strong> : XL</li>
-                  <li><strong>Tình trạng</strong> : <span class="label label-success">Còn hàng</span></li>
-                  <li><strong>Số lượng</strong> : <input type="number" min="1" max="50" value="1" /></li>
-                  <li><button class="btn btn-primary">Cho vào giỏ</button></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="{{asset('js/bootstrap.min.js')}}"></script>
+        
+</div><!-- end .vns_left -->
+
+<div class="vns_center">
+       @yield('content')
+</div><!-- end .vns_center -->
+
+<div class="vns_right">
+    <div class="box">
+        <h3>Support online</h3>
+        <ul id="supportlist">
+            <li> 
+                <a href="skype:phuong_thaoht?chat">
+                    <img src="http://mystatus.skype.com/smallicon/phuong_thaoht" style="border: none;" width="16" height="16" alt="Ms. Thao" />
+                </a> 
+                <a href="ymsgr:sendIM?&amp;m=Hỗ trợ thông tin sản phẩm" >
+                    <img src="http://opi.yahoo.com/online?u=&amp;t=5&amp;l=us" />
+                </a> Ms. Thao 
+            </li>
+            <li> 
+                <a href="skype:tuanminhco?chat">
+                    <img src="http://mystatus.skype.com/smallicon/tuanminhco" style="border: none;" width="16" height="16" alt="Jenifer" />
+                </a> 
+                <a href="ymsgr:sendIM?ken_forever01@yahoo.com&amp;m=Hỗ trợ thông tin sản phẩm" >
+                    <img src="http://opi.yahoo.com/online?u=ken_forever01@yahoo.com&amp;t=5&amp;l=us" />
+                </a> Jenifer 
+            </li>
+            <li> 
+                <a href="skype:export.japonica?chat">
+                    <img src="http://mystatus.skype.com/smallicon/export.japonica" style="border: none;" width="16" height="16" alt="Lê Mai - Manager" />
+                </a> 
+                <a href="ymsgr:sendIM?lehoamaivn&amp;m=Hỗ trợ thông tin sản phẩm" >
+                    <img src="http://opi.yahoo.com/online?u=lehoamaivn&amp;t=5&amp;l=us" />
+                </a> Lê Mai - Manager 
+            </li>
+            <li> 
+                <a href="skype:nguyendinhduc29?chat">
+                    <img src="http://mystatus.skype.com/smallicon/nguyendinhduc29" style="border: none;" width="16" height="16" alt="Mr. Duc - Export Manager" />
+                </a> 
+                <a href="ymsgr:sendIM?dinhduck35c5&amp;m=Hỗ trợ thông tin sản phẩm" >
+                    <img src="http://opi.yahoo.com/online?u=dinhduck35c5&amp;t=5&amp;l=us" />
+                </a> Mr. Duc - Export Manager 
+            </li>
+            <li>
+                <p style="font-size:12px; color:#cc0000; line-height:24px; margin-left:10px;"> Hotline: 0984 663 966 </p>
+            </li>
+        </ul>
+    </div><!-- end box support -->
+    <div class="box">
+        <h3>Product hot</h3>
+        <div style="clear:both; height:1px; background-color:#fff"></div>
+        <div style="clear:both; height:10px; background-color:#f5f5f5"></div>
+        <div id="advproduct" style="background-color:#f5f5f5; padding-left:5px;">
+            <ul id="producthot">
+                @foreach($list_product_status as $pr_stt)
+                <li> 
+                    <a href="hoa-hoi/hoa-hoi-p13/index.html" title="{{$pr_stt->name}}"> 
+                        <img src="{{Request::url()}}/../uploads/{{$pr_stt->images}}" alt="{{$pr_stt->alt}}" onerror="this.src='images/logo.png'" /> 
+                    </a> 
+                    <a style="height: 16px; overflow: hidden" href="hoa-hoi/hoa-hoi-p13/index.html" title="{{$pr_stt->name}}">
+                        {{$pr_stt->name}}
+                    </a> 
+                    <span>Chi tiết</span> 
+                </li>
+                @endforeach
+            </ul>
+        </div><!--end.advproduct-->
     <script type="text/javascript">
-    $('.carousel').carousel();
-    $('#myModal').modal(options);
-    </script>
-  </body>
+        $('#advproduct').vTicker();
+    </script> 
+    </div><!-- end box producthot -->
+
+    <div class="box adv"> 
+        <a href="index.html" target="_blank" title="QCT"> 
+            <img src="uploads/upload/images/gallery/thuvienanh.png" onerror="this.src='images/logo.png'" alt="QCT" /> 
+        </a> 
+        <a href="#" target="_blank" title="QCP"> 
+            <img src="uploads/upload/images/product/Que3.png" onerror="this.src='images/logo.png'" alt="QCP" /> 
+        </a> 
+        <a href="#" target="_blank" title="QCTT"> 
+            <img src="uploads/upload/images/Quang%20c%c3%a1o/2222(1).png" onerror="this.src='images/logo.png'" alt="QCTT" /> 
+        </a> 
+        <a href="#" target="_blank" title="QCT2"> 
+            <img src="uploads/upload/images/Quang%20c%c3%a1o/qc11(1).png" onerror="this.src='images/logo.png'" alt="QCT2" /> 
+        </a> 
+    </div>
+</div><!-- end .vns_right -->
+
+</div>
+<!-- end cssmenu --> 
+<div style="clear:both"></div>
+<div class="footer">
+    <div class="vns_footer">
+        <ul>
+            <li><a href="index.html" title="Nam phuong Tradding & Production Co.,Ltd" rel="nofollow"><span>Home</span></a></li>
+                        <li><a href="about-us.html" title="Giới thiệu"><span>Introduction</span></a></li>
+                        <li><a href="spices-and-foods/index.html" title="Sản phẩm"><span>Product</span></a></li>
+                        <li><a href="tin-tuc-su-kien.html" title="Tin tức & Sự kiện"><span>News</span></a></li>
+                        <li><a href="dich-vu.html" title="Dịch vụ"><span>Services</span></a></li>
+                        <li><a href="photo-of-shipment.html" title="Thư viện ảnh"><span>Photo bank</span></a></li>
+            
+            <li><a href="lien-he.html" title="Contacts"><span>Contacts</span></a></li>
+        </ul>
+        <div class="power">
+            <a href="http://vinastyle.vn/">
+                                <!-- Thiết kế bởi vinastyle.vn -->
+                                
+            </a>
+        </div>
+    </div>
+    <div style="clear:both; height:10px;"></div>
+    <div class="vns_footercontent">
+        <a id="logo" href="index.html" title="Nam phuong Tradding & Production Co.,Ltd">
+            <img src="images/logo.png" style="width:217px;height:70px;"/>
+        </a>
+        <div id="contact">
+            <h2>
+               <span style="color:#ff0000;"><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Nam phuong Tradding & Production Co.,Ltd</span></span></span>
+           </h2>
+            <div>
+                <div>
+                    <p>
+                        <span style="font-size: small; background-color: rgb(255, 255, 255);">Trụ sở  Yahoo: &nbsp;<strong>lehoamaivn@yahoo.com</strong></span></p>
+                    <p>
+                        <span style="font-size: small; background-color: rgb(255, 255, 255);">VPGD:<strong>export.japonica</strong></span></p>
+                    <p>
+                        <span style="font-size: small; background-color: rgb(255, 255, 255);">ĐT: 043 771 3823 * Hotline: <span style="color:#ff0000;"><strong>0984 663 966 &nbsp; </strong></span></span><span style="font-size: small;">
+                        </br>
+                        Email: <strong>tuanminhcom@gmail.com</strong></span></p>
+                    <p>
+                        <span style="font-size: small; background-color: rgb(255, 255, 255);">Fax: 043 771 3834</span><strong style="color: rgb(255, 0, 0);">&nbsp;info@tuanminhexport.com</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="clear:both; height:5px;"></div>
+</div>
+
+</div><!-- end .vns_main -->
+</body>
 </html>

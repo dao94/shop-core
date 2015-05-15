@@ -139,14 +139,20 @@ class CategoryController extends Controller {
 		if(!isset($id) && empty($id)) {
 			return false;
 		}
-		$Category = new Models\Category;
-		$Category = Models\Category::find($id);
-		$rs = $Category->delete();
-		if($rs == true) {
-					$arr = array('error' => true,'message' => 'Done');
+		$_res_child = DB::table('product')->where('category_id','=',$id)->get();
+		if(empty($_res_child)) {
+			$Category = new Models\Category;
+			$Category = Models\Category::find($id);
+			$rs = $Category->delete();
+			if($rs == true) {
+				$arr = ['error' => true,'message' => 'Done'];
+			} else {
+				$arr = ['error' => false,'message' => 'not Done'];
+			}
 		} else {
-			$arr = array('error' => false,'message' => 'not Done');
+			$arr = ['error'=>false,'message' => 'exits_data_children'];
 		}
+		
 		return json_encode($arr);
 	}
 

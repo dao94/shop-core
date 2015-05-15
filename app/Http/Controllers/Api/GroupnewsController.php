@@ -116,14 +116,20 @@ class GroupnewsController extends Controller {
 		if(!isset($id) && empty($id)) {
 			return false;
 		}
-		$Group_news = new Models\Group_news;
-		$Group_news = Models\Group_news::find($id);
-		$rs = $Group_news->delete();
-		if($rs == true) {
-			$arr = array('error' => true,'message' => 'Done');
+		$_res_child = DB::table('news')->where('group_news_id','=',$id)->get();
+		if(empty($_res_child)) {
+			$Group_news = new Models\Group_news;
+			$Group_news = Models\Group_news::find($id);
+			$rs = $Group_news->delete();
+			if($rs == true) {
+				$arr = array('error' => true,'message' => 'Done');
+			} else {
+				$arr = array('error' => false,'message' => 'not Done');
+			}
 		} else {
-			$arr = array('error' => false,'message' => 'not Done');
+			$arr = ['error'=>false,'message' => 'exits_data_children'];
 		}
+		
 		return json_encode($arr);
 	}
 

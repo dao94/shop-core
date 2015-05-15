@@ -30,11 +30,13 @@ idsCore
                     data    : {id:currentNode.id},
                     dataType: 'json'
                     }).success(function (result){
+                        $scope.disable = false;
+                        $scope.loading = false;
+                        $scope.list();
                         if(result.message == 'Done') {
                             growl.success("Xóa thành công !",{disableCountDown: true});
-                            $scope.disable = false;
-                            $scope.loading = false;
-                            $scope.list();
+                        } else if(result.message =='exits_data_children') {
+                            growl.warning("Yêu cầu xóa hết sản phẩm thuộc danh mục trên !",{disableCountDown: true});
                         }
                     }).error(function (err){
                         growl.warning("Error!");

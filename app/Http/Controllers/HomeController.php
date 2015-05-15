@@ -35,10 +35,31 @@ class HomeController extends Controller {
 	public function index()
 	{	
 		// return view('home');
-		$Model = new Models\News();
-		$news  = $Model->list_news_pagehome();
-		$data  = ['news'=> $news];
+		$Model          = new Models\News();
+		$model_product  = new Models\Product();
+		$mode_category  = new Models\category();
+		$news           = $Model->list_news_pagehome(6);
+		$Product_news   = $model_product ->listProByIdAsc(9);
+		$Product_status = $model_product->listProBySttAsc(9);
+		$one_news       = $Model->list_news_pagehome(1);
+		$category       = $mode_category->get_category(5);
+		$data  = ['news'=> $news,'list_category' => $category,'one_news' => $one_news,'list_product_new'=>$Product_news,'list_product_status' => $Product_status];
 		return View::make('index',$data);
+	}
+
+	public function list_category_by_id($category_id) {
+		return 1;
+		$model_product = new Models\Product();
+		$Model          = new Models\News();
+		$mode_category  = new Models\category();
+		$news           = $Model->list_news_pagehome(6);
+		$Product_news   = $model_product ->listProByIdAsc(9);
+		$Product_status = $model_product->listProBySttAsc(9);
+		$one_news       = $Model->list_news_pagehome(1);
+		$category       = $mode_category->get_category(5);
+		$list_pr       = $model_product->listProductByCategory($category_id);
+		$data  = ['news'=> $news,'list_category' => $category,'one_news' => $one_news,'list_product_new'=>$Product_news,'list_product_status' => $Product_status,'list_pr' => $list_pr];
+		return View::make('productcat',$data);
 	}
 	
 

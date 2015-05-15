@@ -34,7 +34,11 @@ class News extends Model {
 	}
 	/*list news page home*/ 
 	public function list_news_pagehome($limit=0) {
-		$news = DB::table('news')->select('name','images')->where('status','=',1)->orderBy('create_time')->take($limit)->get();	
+		if($limit == 1) {
+			$news = DB::table('news')->select('name','images','description')->where('status','=',1)->orderBy('id')->take($limit)->first();	
+		} else {
+			$news = DB::table('news')->select('name','images','description')->where('status','=',1)->orderBy('create_time')->take($limit)->get();		
+		}
 		return $news;
 	}
 	

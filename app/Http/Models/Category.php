@@ -1,6 +1,7 @@
 <?php namespace App\Http\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use DB;
 class Category extends Model {
 
 	
@@ -18,5 +19,9 @@ class Category extends Model {
 	 *
 	 * @var array
 	 */
+	public function get_category($limit=0) {
+		$_Category = DB::table('category')->select('id','name')->take($limit)->get();	
+		return $_Category;
+	}
 	
 }

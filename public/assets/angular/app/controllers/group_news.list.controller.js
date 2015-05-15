@@ -144,12 +144,13 @@ idsCore
                     data    : {id:id},
                     dataType: 'json'
                     }).success(function (result){
+                        $scope.disable = false;
+                        $scope.loading = false;
+                        $scope.list();
                         if(result.message == 'Done') {
                             growl.success("Xóa thành công chuyên mục !");
-                            $scope.group_new.splice(index,1);
-                            $scope.disable = false;
-                            $scope.loading = false;
-                            $scope.list();
+                        } else if(result.message =='exits_data_children') {
+                            growl.warning("Yêu cầu xóa hết tin tức thuộc nhóm tin trên !",{disableCountDown: true});
                         }else {
                             growl.warning("Lỗi kết nối server, vui lòng thử lại sau  !");    
                         }

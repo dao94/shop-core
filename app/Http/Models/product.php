@@ -1,6 +1,7 @@
 <?php namespace App\Http\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use DB;
 class Product extends Model {
 
 	
@@ -26,6 +27,21 @@ class Product extends Model {
 		$_ret = $this->with(array('category'));
 		$_ret = $_ret->select('id', 'name','price', 'alt','keywords','images','description', 'content', 'status', 'create_time', 'update_time','category_id');
 		return $_ret;
+	}
+	public function listProByIdAsc($limit) {
+		$_Product = DB::table('product')->select('id','alt','name','images','description')->orderBy('create_time')->take($limit)->get();	
+		return $_Product;
+	}
+
+	public function listProBySttAsc($limit) {
+		$_Product = DB::table('product')->select('id','name','alt','images','description')->where('status','=',1)->orderBy('create_time')->take($limit)->get();	
+		return $_Product;
+	}
+
+	public function listProductByCategory($category_id) {
+		if(empty($category_id)) return false;
+		$_Product = DB::table('product')->select('id','name','alt','images','description')->where('category_id','=',$category_id)->orderBy('create_time')->get();	
+		return $_Product;
 	}
 
 }

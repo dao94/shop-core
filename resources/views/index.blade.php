@@ -1,168 +1,75 @@
 @extends('main')
 @section('content')
-<div class="product-list">
-	<div class="title">
-	  <h3>Sản phẩm nổi bật</h3>
-	</div><!-- end title-->
-<div class="list">
-  <div class="product-item col-md-3 col-sm-4 col-sx-6">
-    <div class="thumb text-center">
-      <a href=""><img src="images/product.jpg" alt="alt" class="img-responsive" /></a>
-      <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Xem ngay</button>
-      <span class="status"><i class="glyphicon glyphicon-shopping-cart"></i> Còn hàng</span>
-    </div>
-    <h2 class="product-name"><a href="">Đầm Vintage Chấm Bi</a></h2>
-    <div class="row">
-      <div class="col-md-6 price">50.000 vnđ</div>
-      <div class="col-md-6 product-code">Mã : D001</div>
-    </div>
-  </div><!-- end product-item-->
-  <div class="product-item col-md-3 col-sm-4 col-sx-6">
-    <div class="thumb">
-      <a href=""><img src="images/product.jpg" alt="alt" class="img-responsive" /></a>
-      <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Xem ngay</button>
-      <span class="status"><i class="glyphicon glyphicon-shopping-cart"></i> Còn hàng</span>
-    </div>
-    <h2 class="product-name"><a href="">Đầm Vintage Chấm Bi</a></h2>
-    <div class="row">
-      <div class="col-md-6 price">50.000 vnđ</div>
-      <div class="col-md-6 product-code">Mã : D001</div>
-    </div>
-  </div><!-- end product-item-->
-  <div class="product-item col-md-3 col-sm-4 col-sx-6">
-    <div class="thumb">
-      <a href=""><img src="images/product.jpg" alt="alt" class="img-responsive" /></a>
-      <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Xem ngay</button>
-      <span class="status"><i class="glyphicon glyphicon-shopping-cart"></i> Còn hàng</span>
-    </div>
-    <h2 class="product-name"><a href="">Đầm Vintage Chấm Bi</a></h2>
-    <div class="row">
-      <div class="col-md-6 price">50.000 vnđ</div>
-      <div class="col-md-6 product-code">Mã : D001</div>
-    </div>
-  </div><!-- end product-item-->
-  <div class="product-item col-md-3 col-sm-4 col-sx-6 hidden-sm">
-    <div class="thumb">
-      <a href=""><img src="images/product.jpg" alt="alt" class="img-responsive" /></a>
-      <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Xem ngay</button>
-      <span class="status"><i class="glyphicon glyphicon-shopping-cart"></i> Còn hàng</span>
-    </div>
-    <h2 class="product-name"><a href="">Đầm Vintage Chấm Bi</a></h2>
-    <div class="row">
-      <div class="col-md-6 price">50.000 vnđ</div>
-      <div class="col-md-6 product-code">Mã : D001</div>
-    </div>
-  </div><!-- end product-item-->
-</div><!-- end list-->
-</div><!-- end product-->
-<div class="product-list">
-<div class="title">
-  <h3>Quần nữ</h3>
-</div><!-- end title-->
-<div class="list">
-  <div class="product-item col-md-3 col-sm-4 col-sx-6">
-    <div class="thumb text-center">
-      <a href=""><img src="images/product.jpg" alt="alt" class="img-responsive" /></a>
-      <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Xem ngay</button>
-      <span class="status"><i class="glyphicon glyphicon-shopping-cart"></i> Còn hàng</span>
-    </div>
-    <h2 class="product-name"><a href="">Đầm Vintage Chấm Bi</a></h2>
-    <div class="row">
-      <div class="col-md-6 price">50.000 vnđ</div>
-      <div class="col-md-6 product-code">Mã : D001</div>
-    </div>
-  </div><!-- end product-item-->
-  <div class="product-item col-md-3 col-sm-4 col-sx-6">
-    <div class="thumb">
-      <a href=""><img src="images/product.jpg" alt="alt" class="img-responsive" /></a>
-      <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Xem ngay</button>
-      <span class="status"><i class="glyphicon glyphicon-shopping-cart"></i> Còn hàng</span>
-    </div>
-    <h2 class="product-name"><a href="">Đầm Vintage Chấm Bi</a></h2>
-    <div class="row">
-      <div class="col-md-6 price">50.000 vnđ</div>
-      <div class="col-md-6 product-code">Mã : D001</div>
-    </div>
-  </div><!-- end product-item-->
-  <div class="product-item col-md-3 col-sm-4 col-sx-6">
-    <div class="thumb">
-      <a href=""><img src="images/product.jpg" alt="alt" class="img-responsive" /></a>
-      <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Xem ngay</button>
-      <span class="status"><i class="glyphicon glyphicon-shopping-cart"></i> Còn hàng</span>
-    </div>
-    <h2 class="product-name"><a href="">Đầm Vintage Chấm Bi</a></h2>
-    <div class="row">
-      <div class="col-md-6 price">50.000 vnđ</div>
-      <div class="col-md-6 product-code">Mã : D001</div>
-    </div>
-  </div><!-- end product-item-->
-  <div class="product-item col-md-3 col-sm-4 col-sx-6">
-    <div class="thumb">
-      <a href=""><img src="images/product.jpg" alt="alt" class="img-responsive" /></a>
-      <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Xem ngay</button>
-      <span class="status"><i class="glyphicon glyphicon-shopping-cart"></i> Còn hàng</span>
-    </div>
-    <h2 class="product-name"><a href="">Đầm Vintage Chấm Bi</a></h2>
-    <div class="row">
-      <div class="col-md-6 price">50.000 vnđ</div>
-      <div class="col-md-6 product-code">Mã : D001</div>
-    </div>
-  </div><!-- end product-item-->
-</div><!-- end list-->
-</div><!-- end product-->
-<div class="product-list">
-<div class="title">
-  <h3>Áo nữ</h3>
-</div><!-- end title-->
-<div class="list">
-  <div class="product-item col-md-3 col-sm-4 col-sx-6">
-    <div class="thumb text-center">
-      <a href=""><img src="images/product.jpg" alt="alt" class="img-responsive" /></a>
-      <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Xem ngay</button>
-      <span class="status"><i class="glyphicon glyphicon-shopping-cart"></i> Còn hàng</span>
-    </div>
-    <h2 class="product-name"><a href="">Đầm Vintage Chấm Bi</a></h2>
-    <div class="row">
-      <div class="col-md-6 price">50.000 vnđ</div>
-      <div class="col-md-6 product-code">Mã : D001</div>
-    </div>
-  </div><!-- end product-item-->
-  <div class="product-item col-md-3 col-sm-4 col-sx-6">
-    <div class="thumb">
-      <a href=""><img src="images/product.jpg" alt="alt" class="img-responsive" /></a>
-      <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Xem ngay</button>
-      <span class="status"><i class="glyphicon glyphicon-shopping-cart"></i> Còn hàng</span>
-    </div>
-    <h2 class="product-name"><a href="">Đầm Vintage Chấm Bi</a></h2>
-    <div class="row">
-      <div class="col-md-6 price">50.000 vnđ</div>
-      <div class="col-md-6 product-code">Mã : D001</div>
-    </div>
-  </div><!-- end product-item-->
-  <div class="product-item col-md-3 col-sm-4 col-sx-6">
-    <div class="thumb">
-      <a href=""><img src="images/product.jpg" alt="alt" class="img-responsive" /></a>
-      <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Xem ngay</button>
-      <span class="status"><i class="glyphicon glyphicon-shopping-cart"></i> Còn hàng</span>
-    </div>
-    <h2 class="product-name"><a href="">Đầm Vintage Chấm Bi</a></h2>
-    <div class="row">
-      <div class="col-md-6 price">50.000 vnđ</div>
-      <div class="col-md-6 product-code">Mã : D001</div>
-    </div>
-  </div><!-- end product-item-->
-  <div class="product-item col-md-3 col-sm-4 col-sx-6">
-    <div class="thumb">
-      <a href=""><img src="images/product.jpg" alt="alt" class="img-responsive" /></a>
-      <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Xem ngay</button>
-      <span class="status"><i class="glyphicon glyphicon-shopping-cart"></i> Còn hàng</span>
-    </div>
-    <h2 class="product-name"><a href="">Đầm Vintage Chấm Bi</a></h2>
-    <div class="row">
-      <div class="col-md-6 price">50.000 vnđ</div>
-      <div class="col-md-6 product-code">Mã : D001</div>
-    </div>
-  </div><!-- end product-item-->
-</div><!-- end list-->
-</div><!-- end product-->
+ <div class="box">
+      <h3> <a href="javascript:void(0)">Product list</a> </h3>
+         @foreach($list_product_new as $val)
+          <div class="productitem"> 
+              <a href="que/que-che/index.html" title="{{$val->name}}"> 
+                  <img src="{{Request::url()}}/../uploads/{{$val->images}}" alt="{{$val->alt}}" onerror="this.src='images/logo.png'" />
+              </a>
+              <div class="info"> 
+                  <a style="height: 20px; overflow: hidden;" href="que/que-che/index.html" title="{{$val->name}}">{{$val->name}}</a> 
+                  <a href="que/que-che/index.html" title="{{$val->name}}" class="price"> details </a> 
+              </div>
+          </div>
+          @endforeach
+  </div><!-- end box productnew -->
+  <div style="clear:both; height:10px"></div>
+      <div class="box">
+          <h3> <a href="javascript:void(0)">Product hot</a> </h3>
+          @foreach($list_product_status as $pr_stt)
+          <div class="productitem"> 
+              <a href="que/que-che/index.html" title="{{$pr_stt->name}}"> 
+                  <img src="{{Request::url()}}/../uploads/{{$pr_stt->images}}" alt="{{$pr_stt->alt}}" onerror="this.src='images/logo.png'" /> 
+              </a>
+              <div class="info"> 
+                  <a style="height: 20px; overflow: hidden;" href="que/que-che/index.html" title="{{$pr_stt->name}}">{{$pr_stt->name}}</a> 
+                  <a href="que/que-che-p6/index.html" title="{{$pr_stt->name}}" class="price"> details </a> 
+              </div>
+          </div>
+          @endforeach 
+      </div><!-- end box productnew --> 
+      <script type="text/javascript">
+          $('.vns_center .productitem').each(function(){
+              var index = $(this).index();
+              if(((index) % 3) == 0) 
+              {
+                  $(this).css("float", "right");
+              }
+              else if( ((index + 1) % 3) == 0) 
+              {
+                  $(this).css("margin-left", "23px");
+              }
+          });
+      </script> 
+      <div style="clear: both; height: 10px"></div>
+      <div class="box">
+      <h3>
+          <a href="tin-tuc-su-kien.html" title="news">News</a>
+      </h3>
+      <div style="clear:both; height:10px"></div>
+          <div class="newhome">
+              <h3>
+                  <a href="tin-tuc-su-kien/muc-kich-rung-que-co-van-yen-n19.html" title="{{$one_news->name}}">{{$one_news->name}}</a>
+              </h3>
+              <br />
+              <a href="tin-tuc-su-kien/muc-kich-rung-que-co-van-yen-n19.html" title="{{$one_news->name}}">
+                  <img src="{{Request::url()}}/../uploads/{{$one_news->images}}" onerror="this.src='images/logo.png'" alt="{{$one_news->name}}" />
+              </a>
+              <span>
+              {{$one_news->description}}
+              </span>
+          </div><!--newhome-->
+              <div class="newhomerelat">
+                  <ul>
+                      @foreach($news as $new)
+                      <li>
+                          <a href="tin-tuc-su-kien/nguy-co-tan-kiet-rung-que-n20.html" title="{{$new->name}}">{{$new->name}}</a>
+                      </li>
+                      @endforeach
+                  </ul>
+              </div>
+          <div style="clear:both"></div>
+      </div><!--box-->
+  <div style="clear: both; height: 10px"></div>
 @endsection
