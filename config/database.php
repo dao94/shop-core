@@ -67,7 +67,8 @@ return [
 		'mysql' => [
 			'driver'    => 'mysql',
 			'host'      => env('DB_HOST', 'localhost'),
-			'database'  => env('DB_DATABASE', 'la-shop-core'),
+			// 'database'  => env('DB_DATABASE', 'la-shop-core'),
+			'database'  => env('DB_DATABASE', 'namphuong_shop'),
 			'username'  => env('DB_USERNAME', 'root'),
 			'password'  => env('DB_PASSWORD', ''),
 			'charset'   => 'utf8',

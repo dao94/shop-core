@@ -46,8 +46,8 @@
         <div class="vns_main">
             <div class="header"> 
                 <a href="index.html" title="Nam phuong Tradding & Production Co.,Ltd" rel="nofollow" id="logo">
-                    <img src="images/logo.png" style="width:217px;height:70px" /> </a>
-                <img id="slogan" src="images/banner.png" width="530" />
+                    <img src="{{asset('images/logo.png')}}" style="width:217px;height:70px" /> </a>
+                <img id="slogan" src="{{asset('images/banner.png')}}" width="530" />
                 <div class="searchbox">
                     <ul>
                         <li> <a href="" title="Nam phuong Tradding & Production Co.,Ltd">Home</a> </li>
@@ -65,7 +65,7 @@
             <!-- end .header -->
             <div id="cssmenu">
                 <ul>
-                    <li><a href="index.html" title="Nam phuong Tradding & Production Co.,Ltd"><span>Home</span></a></li>
+                    <li><a href='{{URL::to("/home")}}' title="Nam phuong Tradding & Production Co.,Ltd"><span>Home</span></a></li>
                     <li class="has-sub"> 
                         <a href="about-us.html" title="Introduction"> <span>Introduction</span> </a> 
                             <ul>
@@ -80,13 +80,13 @@
                         </ul>
                     </li>
                     <li class="has-sub"> 
-                        <a href="spices-and-foods/index.html" title="Product">
+                        <a title="Product">
                             <span>Product</span>
                         </a>
                         <ul>
                             <li>
                                 @foreach($list_category as $list)
-                                <a href="spices-and-foods/index.html" title="">
+                                <a href='{{URL::to("/product/$list->id")}}' title="">
                                     <span>{{$list->name}}</span>
                                 </a>
                                 @endforeach
@@ -94,10 +94,10 @@
                         </ul>
                     </li>
                     <li > 
-                        <a href="tin-tuc-su-kien.html" title="News"> <span>News</span> </a> 
+                        <a href='{{URL::to("/news")}}' title="News"> <span>News</span> </a> 
                     </li>
                     <li > 
-                        <a href="dich-vu.html" title="services"> <span>services</span> </a> 
+                        <a href="dich-vu.html" title="services"> <span>Services</span> </a> 
                     </li>
                     <li class="has-sub"> 
                         <a href="photo-of-shipment.html" title="Photo bank"> <span>Photo bank</span> </a> 
@@ -110,13 +110,13 @@
             <div style="clear:both; height:15px;"></div>
             <div id="slide"> 
                 <a href="index.html" title="Slide 3"> 
-                    <img src="images/slide8.png" alt="Slide 3" /> 
+                    <img src="{{asset('images/slide8.png')}}" alt="Slide 3" /> 
                 </a> 
                 <a href="index.html" title="Slide 3"> 
-                    <img src="images/1.jpg" alt="Slide 3" /> 
+                    <img src="{{asset('images/1.jpg')}}" alt="Slide 3" /> 
                 </a> 
                 <a href="index.html" title="Slide 3"> 
-                    <img src="images/2.jpg" alt="Slide 3" /> 
+                    <img src="{{asset('images/2.jpg')}}" alt="Slide 3" /> 
                 </a>
             </div>
     <script type="text/javascript">
@@ -149,7 +149,7 @@
         <ul id="menuproductlist">
             @foreach($list_category as $list)
             <li>
-                <a href="" title="{{$list->name}}">{{$list->name}}</a>
+                <a href='{{URL::to("/product/$list->id")}}' title="{{$list->name}}">{{$list->name}}</a>
             </li>
             @endforeach
         </ul>
@@ -170,7 +170,7 @@
     </div>
     <div class="box adv"> 
         <a href="http://vinastyle.vn/tuanminh/" target="_blank" title="QC6"> 
-            <img src="uploads/upload/images/product/huong-may-9-inches_1(1).jpg" onerror="this.src='images/logo.png'" alt="QC6" /> 
+            <img src="{{asset('uploads/upload/images/product/huong-may-9-inches_1(1).jpg')}}" onerror="this.src='images/logo.png'" alt="QC6" /> 
         </a> 
     </div>
         
@@ -230,7 +230,7 @@
                 @foreach($list_product_status as $pr_stt)
                 <li> 
                     <a href="hoa-hoi/hoa-hoi-p13/index.html" title="{{$pr_stt->name}}"> 
-                        <img src="{{Request::url()}}/../uploads/{{$pr_stt->images}}" alt="{{$pr_stt->alt}}" onerror="this.src='images/logo.png'" /> 
+                        <img src='{{asset("uploads/$pr_stt->images")}}' alt="{{$pr_stt->alt}}" onerror="this.src='images/logo.png'" /> 
                     </a> 
                     <a style="height: 16px; overflow: hidden" href="hoa-hoi/hoa-hoi-p13/index.html" title="{{$pr_stt->name}}">
                         {{$pr_stt->name}}
@@ -286,7 +286,7 @@
     <div style="clear:both; height:10px;"></div>
     <div class="vns_footercontent">
         <a id="logo" href="index.html" title="Nam phuong Tradding & Production Co.,Ltd">
-            <img src="images/logo.png" style="width:217px;height:70px;"/>
+            <img src="{{asset('images/logo.png')}}" style="width:217px;height:70px;"/>
         </a>
         <div id="contact">
             <h2>

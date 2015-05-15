@@ -34,10 +34,13 @@ class NewsController extends Controller {
 	 */
 	public function index()
 	{		
-		$Model           = new Models\News();
-		$news            = $Model->list_news_pagehome(5);
-		$_page_news_data = $Model->list_news_pagehome();
-		$data            = ['news'=> $news,'list_news' => $_page_news_data];
+		$Model          = new Models\News();
+		$model_product  = new Models\Product();
+		$mode_category  = new Models\category();
+		$news           = $Model->list_news_pagehome();
+		$Product_status = $model_product->listProBySttAsc(9);
+		$category       = $mode_category->get_category(5);
+		$data  = ['news'=> $news,'list_category' => $category,'list_product_status' => $Product_status];
 		return View::make('news',$data);
 	}
 

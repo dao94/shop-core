@@ -128,7 +128,7 @@ body{
     text-decoration:none;
 }
 #cssmenu li ul {
-    background:#3399ff;
+    background:#5E9BFC;
     border-left:2px solid #ccc;
     border-right:2px solid #ccc;
     border-bottom:2px solid #ccc;
@@ -785,7 +785,16 @@ ul#partnerlist li a img{
     width:78px; height:48px;
     border:1px solid #ccc;
 }
-
+/*NEWS*/
+.media{
+    margin-top:10px;
+}
+.pull-left{float:left;width: 150px}
+.media-body{float:left;margin-left: 10px;width: 440px}
+.media-body p{font-size: 13px}
+.media-heading{margin-bottom: 10px}
+.pull-right{font-size: 13px;float: right;margin-top: 10px}
+.clearfix{clear: both;}
 
 
 
