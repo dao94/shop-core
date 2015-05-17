@@ -45,6 +45,16 @@
 </style>
 </head>
     <body>
+        <div id="fb-root"></div>
+        <script>
+            (function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&appId=1510399182539685&version=v2.0";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
         <div class="vns_main">
             <div class="header"> 
                 <a href="index.html" title="Nam phuong Tradding & Production Co.,Ltd" rel="nofollow" id="logo">
