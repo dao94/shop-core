@@ -50,10 +50,10 @@
       <div style="clear:both; height:10px"></div>
           <div class="newhome">
               <h3>
-                  <a href="tin-tuc-su-kien/muc-kich-rung-que-co-van-yen-n19.html" title="{{$one_news->name}}">{{$one_news->name}}</a>
+                  <a href='{{URL::to("/detailnew/$one_news->id")}}' title="{{$one_news->name}}">{{$one_news->name}}</a>
               </h3>
               <br />
-              <a href="tin-tuc-su-kien/muc-kich-rung-que-co-van-yen-n19.html" title="{{$one_news->name}}">
+              <a href='{{URL::to("/detailnew/$one_news->id")}}' title="{{$one_news->name}}">
                   <img src="{{Request::url()}}/../uploads/{{$one_news->images}}" onerror="this.src='images/logo.png'" alt="{{$one_news->name}}" />
               </a>
               <span>
@@ -64,7 +64,7 @@
                   <ul>
                       @foreach($news as $new)
                       <li>
-                          <a href="tin-tuc-su-kien/nguy-co-tan-kiet-rung-que-n20.html" title="{{$new->name}}">{{$new->name}}</a>
+                          <a href='{{URL::to("/detailnew/$new->id")}}' title="{{$new->name}}">{{$new->name}}</a>
                       </li>
                       @endforeach
                   </ul>

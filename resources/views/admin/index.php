@@ -97,8 +97,10 @@
         <script src='assets/angular/app/controllers/news.list.controller.js'></script>
         <script src='assets/angular/app/controllers/group_news.list.controller.js'></script>
         <script src='assets/angular/app/controllers/category.list.controller.js'></script>
-        
-
+        <script src='assets/angular/app/controllers/partner.list.controller.js'></script>
+        <script src='assets/angular/app/controllers/album.list.controller.js'></script>
+        <script src='assets/angular/app/controllers/images.list.controller.js'></script>
+        <script src='assets/angular/app/controllers/introduction.list.controller.js'></script>
     <!-- google maps api-->
         <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
 

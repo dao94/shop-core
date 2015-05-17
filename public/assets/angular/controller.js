@@ -129,7 +129,7 @@ idsCore
                     ]
                 },
                 {
-                    id: 1,
+                    id: 2,
                     title: 'Tin tức',
                     icon: 'icon_document_alt first_level_icon',
                     submenu_title: 'Forms',
@@ -145,11 +145,34 @@ idsCore
                     ]
                 },
                 {
-                    id: 99,
-                    title: 'Cấu hình',
+                    id: 3,
+                    title: 'Đối tác',
                     icon: '  icon_adjust-horiz first_level_icon',
-                    link: 'auth.home'
-                }
+                    link: 'auth.partner'
+                },
+                {
+                    id: 4,
+                    title: 'Ảnh',
+                    icon: 'icon_document_alt first_level_icon',
+                    submenu_title: 'Forms',
+                    submenu: [
+                        {
+                            title: 'Danh sách album',
+                            link: 'auth.image.list_album'
+                        },
+                        {
+                            title: 'Danh sách ảnh',
+                            link: 'auth.image.list_image'
+                        }
+                        
+                    ]
+                },
+                {
+                    id: 5,
+                    title: 'Giới thiệu',
+                    icon: '  icon_adjust-horiz first_level_icon',
+                    link: 'auth.introduction'
+                },
 
             ];
 

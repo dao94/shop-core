@@ -33,11 +33,11 @@ class News extends Model {
 		return $_ret;
 	}
 	/*list news page home*/ 
-	public function list_news_pagehome($limit=0) {
+	public function list_news_pagehome($limit=0,$id=0) {
 		if($limit == 1) {
-			$news = DB::table('news')->select('name','images','description')->where('status','=',1)->orderBy('id')->take($limit)->first();	
+			$news = DB::table('news')->select('id','name','images','description')->where('status','=',1)->orderBy('id')->take($limit)->first();	
 		} else {
-			$news = DB::table('news')->select('name','images','description')->where('status','=',1)->orderBy('create_time')->take($limit)->get();		
+			$news = DB::table('news')->select('id','name','images','description')->where('status','=',1)->whereNotIn('id',[$id])->orderBy('create_time')->take($limit)->get();		
 		}
 		return $news;
 	}

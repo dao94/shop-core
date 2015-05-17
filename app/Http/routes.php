@@ -11,11 +11,14 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', 'HomeController@index');
 
 Route::get('home', 'HomeController@index');
+Route::get('photo', 'PhotoController@index');
 Route::get('category/{id}', 'HomeController@list_category_by_id')->where('id', '[0-9]+');
+Route::get('introduction/{id}','IntroductionController@index')->where('id', '[0-9]+');
 Route::get('product/{id}', 'DetailController@index')->where('id', '[0-9]+');
+Route::get('detailnew/{id}', 'DetailController@news')->where('id', '[0-9]+');
 Route::get('news','NewsController@index');
 Route::get('lienhe','ContactController@index');
 Route::get('home2',function() {
@@ -33,6 +36,10 @@ Route::group(['prefix' => 'api/v1', 'middleware' => 'auth'], function()
 	Route::controller('group_news'	, 'Api\GroupnewsController');
 	Route::controller('category'	, 'Api\CategoryController');
 	Route::controller('news'		, 'Api\NewsController');
+	Route::controller('partner'		, 'Api\PartnerController');
+	Route::controller('images'		, 'Api\ImagesController');
+	Route::controller('album'		, 'Api\AlbumController');
+	Route::controller('introduction', 'Api\IntroductionController');
 	Route::controller('product'		, 'Api\ProductController');
 	Route::controller('upload'		, 'Api\UploadController');
 

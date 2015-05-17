@@ -146,5 +146,88 @@ idsCore
                     },
                     controller: 'NewsListController'
                 })
+                .state('auth.partner', {
+                    page_title: titlePrefix + ' - Danh sách đối tác',
+                    data: {
+                        ncyBreadcrumbLabel: 'Danh sách đối tác'
+                    },
+                    url: '/partner',
+                    templateUrl: 'views/admin/partner/list.html',
+                    resolve: {
+                        files: [
+                            'uiLoad',
+                            function (uiLoad) {
+                                return uiLoad.load([
+                                    'assets/lib/iCheck/icheck.min.js',
+                                ]);
+                            }
+                        ]
+                    },
+                    controller: 'PartnerController'
+                })
+                .state('auth.image', {
+                    // With abstract set to true, that means this state can not be explicitly activated.
+                    abstract: true,
+                    url: '/image',
+                    template: '<div ui-view autoscroll="false" class="mainView-animate"></div>'
+                })
+                .state('auth.image.list_album', {
+                    page_title: titlePrefix + ' - Danh sách album',
+                    data: {
+                        ncyBreadcrumbLabel: 'Danh sách album'
+                    },
+                    url: '/album',
+                    templateUrl: 'views/admin/album/list.html',
+                    resolve: {
+                        files: [
+                            'uiLoad',
+                            function (uiLoad) {
+                                return uiLoad.load([
+                                    'assets/lib/iCheck/icheck.min.js',
+                                ]);
+                            }
+                        ]
+                    },
+                    controller: 'AlbumController'
+                })
+                .state('auth.image.list_image', {
+                    page_title: titlePrefix + ' - Danh sách hình ảnh',
+                    data: {
+                        ncyBreadcrumbLabel: 'Danh sách hình ảnh'
+                    },
+                    url: '/image',
+                    templateUrl: 'views/admin/images/list.html',
+                    resolve: {
+                        files: [
+                            'uiLoad',
+                            function (uiLoad) {
+                                return uiLoad.load([
+                                    'assets/lib/iCheck/icheck.min.js',
+                                ]);
+                            }
+                        ]
+                    },
+                    controller: 'ImagesController'
+                })
+                .state('auth.introduction', {
+                    page_title: titlePrefix + ' - Giới thiệu',
+                    data: {
+                        ncyBreadcrumbLabel: 'Giới thiệu'
+                    },
+                    url: '/introduction',
+                    templateUrl: 'views/admin/introduction/list.html',
+                    resolve: {
+                        files: [
+                            'uiLoad',
+                            function (uiLoad) {
+                                return uiLoad.load([
+                                    'assets/lib/iCheck/icheck.min.js',
+                                ]);
+                            }
+                        ]
+                    },
+                    controller: 'IntroductionController'
+                })
+
         }
     ]);

@@ -82,12 +82,11 @@
                         <a href="about-us.html" title="Introduction"> <span>Introduction</span> </a> 
                             <ul>
                                 <li>
-                                    <a href="ve-chung-toi.html" title="About us">
-                                    <span>About us</span>
+                                @foreach($list_intro as $list)
+                                    <a href='{{URL::to("/introduction/$list->id")}}' title="About us">
+                                        <span>{{$list->name}}</span>
                                     </a>
-                                    <a href="khach-hang-thi-truong.html" title="customer and exporting market">
-                                    <span>customer and exporting market</span>
-                                </a>
+                                @endforeach
                             </li>
                         </ul>
                     </li>
@@ -98,7 +97,7 @@
                         <ul>
                             <li>
                                 @foreach($list_category as $list)
-                                <a href='{{URL::to("/product/$list->id")}}' title="">
+                                <a href='{{URL::to("/category/$list->id")}}' title="">
                                     <span>{{$list->name}}</span>
                                 </a>
                                 @endforeach
@@ -173,17 +172,19 @@
     </div><!-- end box menuproductlist -->
 
     <div class="box">
-        <h3>Statistic</h3>
+        <h3>Static</h3>
         <div style="width:190px; background-color:#f5f5f5; margin-top:1px; line-height:24px; font-size:12px; color:#333">
             <p style="padding-left:10px;">Online: 12</p>
             <p style="padding-left:10px;">Total visite: 1234</p>
             <div style="clear:both"></div>
         </div>
     </div>
-    <div class="box adv"> 
-        <a href="http://vinastyle.vn/tuanminh/" target="_blank" title="QC6"> 
-            <img src="{{asset('uploads/upload/images/product/huong-may-9-inches_1(1).jpg')}}" onerror="this.src='images/logo.png'" alt="QC6" /> 
-        </a> 
+    <div class="box adv">
+        @foreach($list_partner as $list)
+        <a href="{{$list->link}}" target="_blank" title="{{$list->name}}"> 
+            <img src='{{asset("uploads/$list->images")}}' onerror="this.src='images/logo.png'" alt="{{$list->alt}}" /> 
+        </a>
+        @endforeach
     </div>
         
 </div><!-- end .vns_left -->
@@ -247,7 +248,7 @@
                     <a style="height: 16px; overflow: hidden" href='{{URL::to("/product/$pr_stt->id")}}' title="{{$pr_stt->name}}">
                         {{$pr_stt->name}}
                     </a> 
-                    <span>Chi tiết</span> 
+                    <a href='{{URL::to("/product/$pr_stt->id")}}'><span>Detail</span></a>
                 </li>
                 @endforeach
             </ul>
@@ -256,23 +257,7 @@
         $('#advproduct').vTicker();
     </script> 
     </div><!-- end box producthot -->
-
-    <div class="box adv"> 
-        <a href="index.html" target="_blank" title="QCT"> 
-            <img src="uploads/upload/images/gallery/thuvienanh.png" onerror="this.src='images/logo.png'" alt="QCT" /> 
-        </a> 
-        <a href="#" target="_blank" title="QCP"> 
-            <img src="uploads/upload/images/product/Que3.png" onerror="this.src='images/logo.png'" alt="QCP" /> 
-        </a> 
-        <a href="#" target="_blank" title="QCTT"> 
-            <img src="uploads/upload/images/Quang%20c%c3%a1o/2222(1).png" onerror="this.src='images/logo.png'" alt="QCTT" /> 
-        </a> 
-        <a href="#" target="_blank" title="QCT2"> 
-            <img src="uploads/upload/images/Quang%20c%c3%a1o/qc11(1).png" onerror="this.src='images/logo.png'" alt="QCT2" /> 
-        </a> 
-    </div>
 </div><!-- end .vns_right -->
-
 </div>
 <!-- end cssmenu --> 
 <div style="clear:both"></div>

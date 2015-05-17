@@ -33,14 +33,18 @@ class NewsController extends Controller {
 	 * @return Response
 	 */
 	public function index()
-	{		
+	{	
 		$Model          = new Models\News();
 		$model_product  = new Models\Product();
 		$mode_category  = new Models\category();
+		$partner        = new Models\partner();
+		$intro          = new Models\Introduction();
+		$list_intro     = $intro->getlist();
+		$list_partner   = $partner->list_par(2);
 		$news           = $Model->list_news_pagehome();
 		$Product_status = $model_product->listProBySttAsc(9);
 		$category       = $mode_category->get_category(5);
-		$data  = ['news'=> $news,'list_category' => $category,'list_product_status' => $Product_status];
+		$data  = ['news'=> $news,'list_category' => $category,'list_product_status' => $Product_status,'list_partner'=>$list_partner,'list_intro'=>$list_intro];
 		return View::make('news',$data);
 	}
 

@@ -5,13 +5,13 @@
 		@if(!empty($news))
 		@foreach($news as $new)
 		<div class="media">
-		  <a class="pull-left" href="#">
+		  <a class="pull-left" href='{{URL::to("/detailnew/$new->id")}}'>
 		    <img class="media-object" src='{{asset("uploads/$new->images")}}' alt="" style="width:150px;height:100px">
 		  </a>
 		  <div class="media-body">
-		    <a href=""><h4 class="media-heading">{{$new->name}}</h4></a>
+		    <a href='{{URL::to("/detailnew/$new->id")}}'><h4 class="media-heading">{{$new->name}}</h4></a>
 		    <p>{{$new->description}}</p>
-		    <a href=""><em class="pull-right" style="color:red">detail ...</em></a>
+		    <a href='{{URL::to("/detailnew/$new->id")}}'><em class="pull-right" style="color:red">detail ...</em></a>
 		  </div>
 		</div>
 		<div class="clearfix"></div>
