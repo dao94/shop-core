@@ -128,7 +128,7 @@ body{
     text-decoration:none;
 }
 #cssmenu li ul {
-    background:#5E9BFC;
+    background:#046a1a;
     border-left:2px solid #ccc;
     border-right:2px solid #ccc;
     border-bottom:2px solid #ccc;
@@ -234,7 +234,7 @@ body{
     width:190px;
 }	
 .vns_main .vns_content .vns_left .box{
-    background:#3399ff;
+    background:#046A1A;
     background-repeat:no-repeat;
     background-position:top center;
     min-height:50px;
@@ -521,7 +521,7 @@ body{
     width:190px;
 }
 .vns_main .vns_content .vns_right .box{
-    background:#3399ff;
+    background:#046A1A;
     background-repeat:no-repeat;
     background-position:top center;
     min-height:50px;

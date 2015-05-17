@@ -14,7 +14,8 @@
 Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
-Route::get('product/{id}', 'HomeController@list_category_by_id')->where('id', '[0-9]+');
+Route::get('category/{id}', 'HomeController@list_category_by_id')->where('id', '[0-9]+');
+Route::get('product/{id}', 'DetailController@index')->where('id', '[0-9]+');
 Route::get('news','NewsController@index');
 Route::get('lienhe','ContactController@index');
 Route::get('home2',function() {

@@ -10,6 +10,8 @@
     <meta content='global' name='distribution'/>
     <meta content='1 days' name='revisit'/>
     <link href="{{asset('styles/style.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('styles/FSdetail_product.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('styles/FSmain.css')}}" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="{{asset('scripts/jquery-1.7.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('scripts/jquery.vticker.js')}}"></script>
     <link rel="stylesheet" href="{{asset('scripts/nivo-slider/nivo-slider.css')}}" type="text/css" media="screen" />
@@ -50,7 +52,7 @@
                 <img id="slogan" src="{{asset('images/banner.png')}}" width="530" />
                 <div class="searchbox">
                     <ul>
-                        <li> <a href="" title="Nam phuong Tradding & Production Co.,Ltd">Home</a> </li>
+                        <li> <a href='{{URL::to("/home")}}' title="Nam phuong Tradding & Production Co.,Ltd">Home</a> </li>
                         <li> <a href="javascript:void(0);">Help</a> </li>
                         <li> <a href="lien-he.html">Contact</a> </li>
                     </ul>
@@ -149,7 +151,7 @@
         <ul id="menuproductlist">
             @foreach($list_category as $list)
             <li>
-                <a href='{{URL::to("/product/$list->id")}}' title="{{$list->name}}">{{$list->name}}</a>
+                <a href='{{URL::to("/category/$list->id")}}' title="{{$list->name}}">{{$list->name}}</a>
             </li>
             @endforeach
         </ul>
@@ -229,10 +231,10 @@
             <ul id="producthot">
                 @foreach($list_product_status as $pr_stt)
                 <li> 
-                    <a href="hoa-hoi/hoa-hoi-p13/index.html" title="{{$pr_stt->name}}"> 
+                    <a href='{{URL::to("/product/$pr_stt->id")}}' title="{{$pr_stt->name}}"> 
                         <img src='{{asset("uploads/$pr_stt->images")}}' alt="{{$pr_stt->alt}}" onerror="this.src='images/logo.png'" /> 
                     </a> 
-                    <a style="height: 16px; overflow: hidden" href="hoa-hoi/hoa-hoi-p13/index.html" title="{{$pr_stt->name}}">
+                    <a style="height: 16px; overflow: hidden" href='{{URL::to("/product/$pr_stt->id")}}' title="{{$pr_stt->name}}">
                         {{$pr_stt->name}}
                     </a> 
                     <span>Chi tiết</span> 

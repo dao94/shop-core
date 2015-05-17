@@ -4,12 +4,12 @@
       <h3> <a href="javascript:void(0)">Product list</a> </h3>
          @foreach($list_product_new as $val)
           <div class="productitem"> 
-              <a href="que/que-che/index.html" title="{{$val->name}}"> 
+              <a href='{{URL::to("/product/$val->id")}}'> 
                   <img src="{{Request::url()}}/../uploads/{{$val->images}}" alt="{{$val->alt}}" onerror="this.src='images/logo.png'" />
               </a>
               <div class="info"> 
                   <a style="height: 20px; overflow: hidden;" href="que/que-che/index.html" title="{{$val->name}}">{{$val->name}}</a> 
-                  <a href="que/que-che/index.html" title="{{$val->name}}" class="price"> details </a> 
+                  <a href='{{URL::to("/product/$val->id")}}' title="{{$val->name}}" class="price"> details </a> 
               </div>
           </div>
           @endforeach
@@ -19,12 +19,12 @@
           <h3> <a href="javascript:void(0)">Product hot</a> </h3>
           @foreach($list_product_status as $pr_stt)
           <div class="productitem"> 
-              <a href="que/que-che/index.html" title="{{$pr_stt->name}}"> 
+              <a href='{{URL::to("/product/$pr_stt->id")}}' title="{{$pr_stt->name}}"> 
                   <img src="{{Request::url()}}/../uploads/{{$pr_stt->images}}" alt="{{$pr_stt->alt}}" onerror="this.src='images/logo.png'" /> 
               </a>
               <div class="info"> 
-                  <a style="height: 20px; overflow: hidden;" href="que/que-che/index.html" title="{{$pr_stt->name}}">{{$pr_stt->name}}</a> 
-                  <a href="que/que-che-p6/index.html" title="{{$pr_stt->name}}" class="price"> details </a> 
+                  <a style="height: 20px; overflow: hidden;" href='{{URL::to("/product/$pr_stt->id")}}' title="{{$pr_stt->name}}">{{$pr_stt->name}}</a> 
+                  <a href='{{URL::to("/product/$pr_stt->id")}}' title="{{$pr_stt->name}}" class="price"> details </a> 
               </div>
           </div>
           @endforeach 

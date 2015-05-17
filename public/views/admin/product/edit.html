@@ -74,7 +74,7 @@
         <div class="form-group">
             <label class="col-sm-2 control-label" for="des">Mô tả <span class="star">(*)</span>:</label>
             <div class="col-sm-10">
-                <textarea name="des" ng-model="row.description" id="des" cols="30" rows="4" class="form-control" ng-keyup="keyPress(event=$event)"></textarea>
+                <div class="des" text-angular ng-model="row.description"></div>
             </div>
         </div>
         <div class="clearfix"></div>
@@ -82,7 +82,7 @@
             <label class="col-sm-2 control-label" for="content" >Nội dung :</label>
             <div class="col-sm-10">
                 <!-- <textarea text-angular name="content" id="content" cols="30" rows="4" class="form-control" data-parsley-required="true" data-parsley-minlength="40"></textarea> -->
-                <div text-angular ng-model="row.content" ng-keyup="keyPress(event=$event)"></div>
+                <div text-angular ng-model="row.content"></div>
             </div>
         </div>
         <div class="clearfix"></div>

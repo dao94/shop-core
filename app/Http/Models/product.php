@@ -38,9 +38,14 @@ class Product extends Model {
 		return $_Product;
 	}
 
-	public function listProductByCategory($category_id) {
+	public function listProductByCategory($category_id,$id=0) {
 		if(empty($category_id)) return false;
-		$_Product = DB::table('product')->select('id','name','alt','images','description')->where('category_id','=',$category_id)->orderBy('create_time')->get();	
+		if(empty($id)) {
+			$_Product = DB::table('product')->select('id','name','alt','images','description')->where('category_id','=',$category_id)->orderBy('create_time')->get();	
+		} else {
+			$_Product = DB::table('product')->select('id','name','alt','images','description')->where('category_id','=',$category_id)->whereNotIn('id',[$id])->orderBy('create_time')->get();	
+		}
+		
 		return $_Product;
 	}
 
