@@ -32,18 +32,22 @@ class PhotoController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index($id)
 	{		
-		$Model          = new Models\News();
-		$model_product  = new Models\Product();
-		$mode_category  = new Models\category();
-		$partner        = new Models\partner();
-		$intro          = new Models\Introduction();
-		$list_intro     = $intro->getlist();
-		$list_partner   = $partner->list_par(2);
-		$Product_status = $model_product->listProBySttAsc(9);
-		$category       = $mode_category->get_category(5);
-		$data  = ['list_category' => $category,'list_product_status' => $Product_status,'list_partner'=>$list_partner,'list_intro'=>$list_intro];
+		$Model            = new Models\News();
+		$model_product    = new Models\Product();
+		$mode_category    = new Models\category();
+		$partner          = new Models\partner();
+		$intro            = new Models\Introduction();
+		$_Objphoto        = new Models\Images();
+		$ObjAlbum         = new Models\Album();
+		$_list_name_album = $ObjAlbum->getNameAlbum();
+		$list_image       = $_Objphoto->getlist($id);
+		$list_intro       = $intro->getlist();
+		$list_partner     = $partner->list_par();
+		$Product_status   = $model_product->listProBySttAsc(9);
+		$category         = $mode_category->get_category(5);
+		$data  = ['list_category' => $category,'list_product_status' => $Product_status,'list_partner'=>$list_partner,'list_intro'=>$list_intro,'list_image'=>$list_image,'list_name_album'=>$_list_name_album];
 		return View::make('photo',$data);
 	}
 

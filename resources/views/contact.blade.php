@@ -1,25 +1,25 @@
 @extends('main')
 @section('content')
- <div class="box">
-        <h3><a href="lien-he.html" title="Liên hệ">Liên hệ</a></h3>
+    <div class="box">
+        <h3><a href="http://tuanminhexport.com/contact" title="Contact">Contact</a></h3>
     </div>
-    <div style="width: 500px; margin: 0px auto">
-        <br /><br />
-        <div id='contact_form_errorloc' class='err'>
+    <div style="width: 500px; margin: 0px auto;font-size:12px" >
+        <br><br>
+        <div id="contact_form_errorloc" class="err">
                         <span style="color: #00A6C7">
-                <span style="color: #000; font-weight: bold">Bạn có thể liên hệ trực tiếp tới .. tại địa chỉ:<br /><br /></span>
-                Công ty TNHH Thương Mại và Sản Xuất Tuấn Minh <br>Trụ sở chính: Số 10, ngõ 22, Hàng Vôi, Hoàn Kiếm, Hà Nội <br>VPGD: Tầng 4, số 559, Kim Mã, Ba Đình, Hà Nội  <br>ĐT: 043 771 3823 * Hotline: 0984 663 966 * Fax: 043 771 3834   <br /><br />
-                <span style="color: #000; font-weight: bold;">Hoặc liên hệ bằng cách nhập thông tin vào form dưới đây:</span>
+                <span style="color: #000; font-weight: bold">You can contact directly to the .. at:<br><br></span>
+                nam phuong prouduction and trading investment company limited<br>Head Office: No. 16, hai ba trung  , trang tien Street, Hoan Kiem District, Hanoi <br> 21 Lo duc, hai ba trung, Hanoi  <br>Tel: (+84)989 14 9394 * Hotline: (+84)97 567 8488* Fax: (+84)43 771 3824<br><br>
+                <span style="color: #000; font-weight: bold;">Or by entering your contact information into the form below:</span>
             </span>
-                        <br />
+                        <br>
             
         </div>
         <div style="clear: both; height: 10px"></div>
         <form method="POST" name="contact_form" action="#"> 
             <table>
-                <tr>
+                <tbody><tr>
                     <td style="text-align: right; width: 120px">
-                        Người liên hệ :
+                        Contact :
                     </td>
                     <td>
                         <input type="text" name="name" style="width: 315px">        
@@ -34,25 +34,25 @@
                     </td>
                 </tr>
                 <tr>
-                    <td style="text-align: right; vertical-align: top">Nội dung liên hệ :</td>
+                    <td style="text-align: right; vertical-align: top">Content :</td>
                     <td>
-                        <textarea style="width: 315px" name="message" rows=8></textarea>
+                        <textarea style="width: 315px" name="message" rows="8"></textarea>
                     </td>
                 </tr>
-                <!-- <tr>
+                <tr>
                     <td colspan="2">
-                        <label for='message'>Vui lòng nhập mã xác nhận :</label>
+                        <label for="message">Please enter code :</label>
                         <input id="6_letters_code" name="code" type="text">
-                        <img src="captcha_code_file.jpg" id='captchaimg' >
+                        <img src="http://tuanminhexport.com/captcha_code_file.php" id="captchaimg">
                     </td>
-                </tr> -->
+                </tr>
                 <tr>
                     <th colspan="2">
-                        <input type="submit" value="Gửi thông tin liên hệ" name='submit' style="padding: 3px 10px;" />
-                        <input type="reset" value="Làm mới" style="padding: 3px 10px;" />
+                        <input type="submit" value="Send contact" name="submit" style="padding: 3px 10px;">
+                        <input type="reset" value="Reset" style="padding: 3px 10px;">
                     </th>
                 </tr>
-            </table>
+            </tbody></table>
 
         </form>
     </div>
@@ -62,9 +62,9 @@
         frmvalidator.EnableOnPageErrorDisplaySingleBox();
         frmvalidator.EnableMsgsTogether();
 
-        frmvalidator.addValidation("name","req","Vui lòng nhập tên người liên hệ"); 
-        frmvalidator.addValidation("email","req","Vui lòng nhập email"); 
-        frmvalidator.addValidation("code","req","Vui lòng nhập mã xác nhận");
-        frmvalidator.addValidation("email","email","Địa chỉ email không hợp lệ"); 
+        frmvalidator.addValidation("name","req","Please enter contact name"); 
+        frmvalidator.addValidation("email","req","Please enter email"); 
+        frmvalidator.addValidation("code","req","Please enter code");
+        frmvalidator.addValidation("email","email","Invalid email address"); 
     </script>
 @endsection

@@ -39,12 +39,14 @@ class IntroductionController extends Controller {
 		$mode_category  = new Models\category();
 		$partner        = new Models\partner();
 		$intro          = new Models\Introduction();
-		$list_partner   = $partner->list_par(2);
+		$ObjAlbum         = new Models\Album();
+		$_list_name_album = $ObjAlbum->getNameAlbum();
+		$list_partner   = $partner->list_par();
 		$Product_status = $model_product->listProBySttAsc(9);
 		$category       = $mode_category->get_category(5);
 		$list_intro     = $intro->getlist();
 		$detail_intro = $intro->getdetail($id);
-		$data  = ['list_category' => $category,'list_product_status' => $Product_status,'list_partner'=>$list_partner,'list_intro'=>$list_intro,'detail_intro'=>$detail_intro];
+		$data  = ['list_category' => $category,'list_product_status' => $Product_status,'list_partner'=>$list_partner,'list_intro'=>$list_intro,'detail_intro'=>$detail_intro,'list_name_album'=>$_list_name_album];
 		return View::make('introduction',$data);
 	}
 	

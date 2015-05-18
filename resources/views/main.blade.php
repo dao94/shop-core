@@ -64,7 +64,7 @@
                     <ul>
                         <li> <a href='{{URL::to("/home")}}' title="Nam phuong Tradding & Production Co.,Ltd">Home</a> </li>
                         <li> <a href="javascript:void(0);">Help</a> </li>
-                        <li> <a href="lien-he.html">Contact</a> </li>
+                        <li> <a href='{{URL::to("/contact")}}'>Contact</a> </li>
                     </ul>
                     <form method="get" action="http://www.tuanminhexport.com/">
                         <input type="text" name="search" />
@@ -79,7 +79,7 @@
                 <ul>
                     <li><a href='{{URL::to("/home")}}' title="Nam phuong Tradding & Production Co.,Ltd"><span>Home</span></a></li>
                     <li class="has-sub"> 
-                        <a href="about-us.html" title="Introduction"> <span>Introduction</span> </a> 
+                        <a href="" title="Introduction"> <span>Introduction</span> </a> 
                             <ul>
                                 <li>
                                 @foreach($list_intro as $list)
@@ -91,7 +91,7 @@
                         </ul>
                     </li>
                     <li class="has-sub"> 
-                        <a title="Product">
+                        <a href="" title="Product">
                             <span>Product</span>
                         </a>
                         <ul>
@@ -108,12 +108,21 @@
                         <a href='{{URL::to("/news")}}' title="News"> <span>News</span> </a> 
                     </li>
                     <li > 
-                        <a href="dich-vu.html" title="services"> <span>Services</span> </a> 
+                        <a href="" title="services"> <span>Services</span> </a> 
                     </li>
                     <li class="has-sub"> 
-                        <a href="photo-of-shipment.html" title="Photo bank"> <span>Photo bank</span> </a> 
+                        <a href="" title="Photo bank"> <span>Photo bank</span> </a>
+                        <ul>
+                            <li>
+                                @foreach($list_name_album as $list)
+                                <a href='{{URL::to("/photo/$list->id")}}' title="">
+                                    <span>{{$list->name}}</span>
+                                </a>
+                                @endforeach
+                            </li>
+                        </ul> 
                     </li>
-                    <li><a href="lien-he.html" title="Contacts"><span>Contacts</span></a></li>
+                    <li><a href='{{URL::to("/contact")}}' title="Contacts"><span>Contacts</span></a></li>
                 </ul>
             </div>
             <!-- end cssmenu -->
@@ -230,7 +239,7 @@
                 </a> Mr. Duc - Export Manager 
             </li>
             <li>
-                <p style="font-size:12px; color:#cc0000; line-height:24px; margin-left:10px;"> Hotline: 0984 663 966 </p>
+                <p style="font-size:12px; color:#cc0000; line-height:24px; margin-left:10px;"> Hotline:  0989 14 9394</p>
             </li>
         </ul>
     </div><!-- end box support -->
@@ -264,14 +273,14 @@
 <div class="footer">
     <div class="vns_footer">
         <ul>
-            <li><a href="index.html" title="Nam phuong Tradding & Production Co.,Ltd" rel="nofollow"><span>Home</span></a></li>
-                        <li><a href="about-us.html" title="Giới thiệu"><span>Introduction</span></a></li>
-                        <li><a href="spices-and-foods/index.html" title="Sản phẩm"><span>Product</span></a></li>
-                        <li><a href="tin-tuc-su-kien.html" title="Tin tức & Sự kiện"><span>News</span></a></li>
-                        <li><a href="dich-vu.html" title="Dịch vụ"><span>Services</span></a></li>
-                        <li><a href="photo-of-shipment.html" title="Thư viện ảnh"><span>Photo bank</span></a></li>
+            <li><a href='{{URL::to("/home")}}' rel="nofollow"><span>Home</span></a></li>
+                        <li><a href='' title="Giới thiệu"><span>Introduction</span></a></li>
+                        <li><a href='' title="Sản phẩm"><span>Product</span></a></li>
+                        <li><a href='{{URL::to("/news")}}' title="Tin tức & Sự kiện"><span>News</span></a></li>
+                        <li><a href="" title="Dịch vụ"><span>Services</span></a></li>
+                        <li><a href="" title="Thư viện ảnh"><span>Photo bank</span></a></li>
             
-            <li><a href="lien-he.html" title="Contacts"><span>Contacts</span></a></li>
+            <li><a href='{{URL::to("/contact")}}' title="Contacts"><span>Contacts</span></a></li>
         </ul>
         <div class="power">
             <a href="http://vinastyle.vn/">
@@ -292,13 +301,13 @@
             <div>
                 <div>
                     <p>
-                        <span style="font-size: small; background-color: rgb(255, 255, 255);">Trụ sở  Yahoo: &nbsp;<strong>lehoamaivn@yahoo.com</strong></span></p>
+                        <span style="font-size: small; background-color: rgb(255, 255, 255);">Head office: &nbsp;<strong>16 Hai Ba Trung -Trang Tien- Quan Hoan Kiem - Ha Noi</strong></span></p>
                     <p>
-                        <span style="font-size: small; background-color: rgb(255, 255, 255);">VPGD:<strong>export.japonica</strong></span></p>
+                        <span style="font-size: small; background-color: rgb(255, 255, 255);">Office:<strong>21 Lo Duc - p.Pham Dinh Ho- Quan Hai Ba Trung</strong></span></p>
                     <p>
-                        <span style="font-size: small; background-color: rgb(255, 255, 255);">ĐT: 043 771 3823 * Hotline: <span style="color:#ff0000;"><strong>0984 663 966 &nbsp; </strong></span></span><span style="font-size: small;">
+                        <span style="font-size: small; background-color: rgb(255, 255, 255);">Phone: 097 567 8488 * Hotline: <span style="color:#ff0000;"><strong>0989 14 9394 &nbsp; </strong></span></span><span style="font-size: small;">
                         </br>
-                        Email: <strong>tuanminhcom@gmail.com</strong></span></p>
+                        Email: <strong>namphuong.agarrbatti@gmail.com</strong></span></p>
                     <p>
                         <span style="font-size: small; background-color: rgb(255, 255, 255);">Fax: 043 771 3834</span><strong style="color: rgb(255, 0, 0);">&nbsp;info@tuanminhexport.com</strong></p>
                 </div>

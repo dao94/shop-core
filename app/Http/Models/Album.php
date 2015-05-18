@@ -23,4 +23,8 @@ class Album extends Model {
 		$res = DB::table('album')->get();
 		return $res;
 	}
+	public function getNameAlbum() {
+		$_ObjName = DB::table('album')->select('id','name')->orderBy('create_time')->get();	
+		return $_ObjName;
+	}
 }

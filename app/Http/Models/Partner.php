@@ -23,7 +23,7 @@ class Partner extends Model {
 		$res = DB::table('partner')->get();
 		return $res;
 	}
-	public function list_par($limit) {
+	public function list_par($limit=0) {
 		$_Partner = DB::table('partner')->select('id','name','alt','link','images','alt')->where('status','=',1)->orderBy('create_time')->take($limit)->get();	
 		return $_Partner;
 	}

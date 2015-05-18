@@ -32,6 +32,10 @@ class Images extends Model {
 		$_ret = $_ret->select('id', 'name', 'images','album_id','alt','link', 'create_time', 'update_time', 'status');
 		return $_ret;
 	}
+	public function getlist($album_id) {
+		$_ObjImage = DB::table('images')->select('id','name','alt','images')->where('album_id','=',$album_id)->where('status','=','1')->orderBy('create_time')->get();	
+		return $_ObjImage;
+	}
 	
 
 }
