@@ -3,7 +3,7 @@ use App\Quotation;
 use App\Http\Models as Models;
 use DB;
 use View;
-
+use Illuminate\Http\Request;
 class HomeController extends Controller {
 
 	/*
@@ -74,8 +74,26 @@ class HomeController extends Controller {
 		return View::make('productcat',$data);
 	}
 
-	public function search($text_search) {
-		return $text_search;
+	public function search(Request $request) {
+		$Model            = new Models\News();
+		$model_product    = new Models\Product();
+		$mode_category    = new Models\category();
+		$partner          = new Models\partner();
+		$intro            = new Models\Introduction();
+		$ObjAlbum         = new Models\Album();
+		$search           = $request->input('name');
+		$data_search = null;
+		if(!empty($search)) {
+			$data_search = $model_product->searchProduct($search);
+		}
+		$_list_name_album = $ObjAlbum->getNameAlbum();
+		$list_partner     = $partner->list_par();
+		$Product_news     = $model_product ->listProByIdAsc(9);
+		$Product_status   = $model_product->listProBySttAsc(9);
+		$category         = $mode_category->get_category(5);
+		$list_intro       = $intro->getlist();
+		$data  = ['list_category' => $category,'list_product_new'=>$Product_news,'list_product_status' => $Product_status,'list_partner'=>$list_partner,'list_intro'=>$list_intro,'list_name_album'=>$_list_name_album,'data_search'=>$data_search,'name'=>$search];
+		return View::make('search',$data);
 	}
 	
 

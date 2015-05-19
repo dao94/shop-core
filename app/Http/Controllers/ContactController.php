@@ -3,7 +3,7 @@ use App\Quotation;
 use App\Http\Models as Models;
 use DB;
 use View;
-
+use Illuminate\Http\Request;
 class ContactController extends Controller {
 
     /*
@@ -32,7 +32,7 @@ class ContactController extends Controller {
      *
      * @return Response
      */
-    public function index()
+    public function index(Request $request)
     {   
         $model_product    = new Models\Product();
         $mode_category    = new Models\category();
@@ -44,9 +44,15 @@ class ContactController extends Controller {
         $Product_status   = $model_product->listProBySttAsc(9);
         $category         = $mode_category->get_category(5);
         $list_intro       = $intro->getlist();
-        $data  = ['list_category' => $category,'list_product_status' => $Product_status,'list_partner'=>$list_partner,'list_intro'=>$list_intro,'list_name_album'=>$_list_name_album];
+        $name = $request->input('name');
+        if(isset($submit)) {
+            $data  = ['list_category' => $category,'list_product_status' => $Product_status,'list_partner'=>$list_partner,'list_intro'=>$list_intro,'list_name_album'=>$_list_name_album,'done'=>'ok'];
+        } else {
+            $data  = ['list_category' => $category,'list_product_status' => $Product_status,'list_partner'=>$list_partner,'list_intro'=>$list_intro,'list_name_album'=>$_list_name_album];    
+        }
         return View::make('contact',$data);
     }
+
     
 
 }

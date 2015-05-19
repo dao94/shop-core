@@ -2,8 +2,8 @@
 @section('content')
 	<div class="box boxlist">
         <h3> 
-            <a href='{{URL::to("/home")}}' title="Công ty TNHH Thương Mại và Sản Xuất Tuấn Minh">Trang chủ</a> 
-            <a title="Cơm dừa">{{$product_detail->name}}</a> 
+            <a href='{{URL::to("/home")}}' title="">Trang chủ</a> 
+            <a title="">{{$product_detail->name}}</a> 
         </h3>
         <div class="product_detail product_detail_v2">
             <div class="fl">

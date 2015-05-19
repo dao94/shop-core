@@ -340,9 +340,9 @@ body{
 .vns_main .vns_content .vns_left .box ul#newlistfeature li a:hover{
     color:#178ee2;
 }	
-.vns_main .vns_content .vns_left .adv{
+/*.vns_main .vns_content .vns_left .adv{
     background:none;
-}	
+}	*/
 .vns_main .vns_content .vns_left .adv a{
     text-decoration:none;
 }	
@@ -799,8 +799,5 @@ ul#partnerlist li a img{
 .content_detail_news{font-size: 12px}
 .content_detail_intro{padding:10px;font-size: 12px}
 .fb-like{margin-top: 50px !important;float:right;}
-
-
-
-
+.err{color:red;}
 

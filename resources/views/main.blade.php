@@ -66,8 +66,8 @@
                         <li> <a href="javascript:void(0);">Help</a> </li>
                         <li> <a href='{{URL::to("/contact")}}'>Contact</a> </li>
                     </ul>
-                    <form method="get" action="http://www.tuanminhexport.com/">
-                        <input type="text" name="search" />
+                    <form method="get" action='{{URL::to("/search")}}'>
+                        <input type="text" name="name" />
                         <input type="submit" value=""/>
                     </form>
                 </div>
@@ -122,7 +122,7 @@
                             </li>
                         </ul> 
                     </li>
-                    <li><a href='{{URL::to("/contact")}}' title="Contacts"><span>Contacts</span></a></li>
+                    <li><a href='' title="Contacts"><span>Contacts</span></a></li>
                 </ul>
             </div>
             <!-- end cssmenu -->
@@ -181,19 +181,19 @@
     </div><!-- end box menuproductlist -->
 
     <div class="box">
-        <h3>Static</h3>
-        <div style="width:190px; background-color:#f5f5f5; margin-top:1px; line-height:24px; font-size:12px; color:#333">
-            <p style="padding-left:10px;">Online: 12</p>
-            <p style="padding-left:10px;">Total visite: 1234</p>
-            <div style="clear:both"></div>
+        <h3>Clock</h3>
+        <div style="width:190px; background-color:f5f5f5; margin-top:1px; line-height:24px; font-size:12px; color:#333">
+          <embed width="190" height="290" align="middle" quality="high" wmode="opaque" allowscriptaccess="always" flashvars="alink1=%2F%2Flg.logging.admicro.vn%2Fcpx%3Fcov%3D1%26dmn%3Dhttp%253A%2F%2Fdantri.com.vn%2F%26cmpg%3D1061363%26items%3D321665%26zid%3D221%26cid%3D-1%26lsn%3D1425401775319%26re%3Dhttp%253A%2F%2Fbs.serving-sys.com%2FBurstingPipe%2FadServer.bs%253Fcn%253Dtf%2526c%253D20%2526mc%253Dclick%2526pli%253D12560167%2526PluID%253D0%2526ord%253D%255Btimestamp%255D%26admrd%3D0.3475716949000506&amp;atar1=_blank&amp;admsection=1425401775&amp;id=321665" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" alt="//adi.vcmedia.vn/images/2015/03/mm468x90bk_1425350568.jpg" src="http://d.violet.vn/uploads/resources/603/dong_ho.swf">
         </div>
     </div>
     <div class="box adv">
-        @foreach($list_partner as $list)
-        <a href="{{$list->link}}" target="_blank" title="{{$list->name}}"> 
-            <img src='{{asset("uploads/$list->images")}}' onerror="this.src='images/logo.png'" alt="{{$list->alt}}" /> 
-        </a>
-        @endforeach
+        <div style="width:190px; background-color:white; margin-top:-10px; line-height:24px; font-size:12px; color:#333">
+            @foreach($list_partner as $list)
+            <a href="{{$list->link}}" target="_blank" title="{{$list->name}}"> 
+                <img src='{{asset("uploads/$list->images")}}' onerror="this.src='images/logo.png'" alt="{{$list->alt}}" /> 
+            </a>
+            @endforeach
+        </div>
     </div>
         
 </div><!-- end .vns_left -->
@@ -211,7 +211,7 @@
                     <img src="http://mystatus.skype.com/smallicon/phuong_thaoht" style="border: none;" width="16" height="16" alt="Ms. Thao" />
                 </a> 
                 <a href="ymsgr:sendIM?&amp;m=Hỗ trợ thông tin sản phẩm" >
-                    <img src="http://opi.yahoo.com/online?u=&amp;t=5&amp;l=us" />
+                    <img src="http://opi.yahoo.com/online?u=ken_forever01@yahoo.com&t=5&l=us" />
                 </a> Ms. Thao 
             </li>
             <li> 
@@ -274,12 +274,11 @@
     <div class="vns_footer">
         <ul>
             <li><a href='{{URL::to("/home")}}' rel="nofollow"><span>Home</span></a></li>
-                        <li><a href='' title="Giới thiệu"><span>Introduction</span></a></li>
-                        <li><a href='' title="Sản phẩm"><span>Product</span></a></li>
-                        <li><a href='{{URL::to("/news")}}' title="Tin tức & Sự kiện"><span>News</span></a></li>
-                        <li><a href="" title="Dịch vụ"><span>Services</span></a></li>
-                        <li><a href="" title="Thư viện ảnh"><span>Photo bank</span></a></li>
-            
+                <li><a href='' title="Giới thiệu"><span>Introduction</span></a></li>
+                <li><a href='' title="Sản phẩm"><span>Product</span></a></li>
+                <li><a href='{{URL::to("/news")}}' title="Tin tức & Sự kiện"><span>News</span></a></li>
+                <li><a href="" title="Dịch vụ"><span>Services</span></a></li>
+                <li><a href="" title="Thư viện ảnh"><span>Photo bank</span></a></li>
             <li><a href='{{URL::to("/contact")}}' title="Contacts"><span>Contacts</span></a></li>
         </ul>
         <div class="power">

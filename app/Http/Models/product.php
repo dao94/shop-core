@@ -48,5 +48,9 @@ class Product extends Model {
 		
 		return $_Product;
 	}
+	public function searchProduct($seach) {
+		$_Product = DB::table('product')->select('id','name','alt','images','description')->where("name","like","%$seach%")->orderBy('create_time')->get();	
+		return $_Product;
+	}
 
 }

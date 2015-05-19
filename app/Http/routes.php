@@ -20,7 +20,7 @@ Route::get('introduction/{id}','IntroductionController@index')->where('id', '[0-
 Route::get('product/{id}', 'DetailController@index')->where('id', '[0-9]+');
 Route::get('detailnew/{id}', 'DetailController@news')->where('id', '[0-9]+');
 Route::get('news','NewsController@index');
-Route::get('search/{text_search}','HomeController@search');
+Route::get('search','HomeController@search');
 Route::get('contact','ContactController@index');
 Route::get('home2',function() {
 	$users = DB::table('group_news')->select('name')->get();
